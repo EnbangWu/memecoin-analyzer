@@ -4,7 +4,6 @@ solders>=0.21.0
 solana>=0.36.6
 requests>=2.32.3
 SQLAlchemy>=2.0.31
-sqlite3
 tweepy>=4.14.0
 plotly>=5.22.0
 matplotlib>=3.9.1
@@ -13,3 +12,4 @@ python-telegram-bot>=21.4
 schedule>=1.2.2
 python-dotenv>=1.0.1
 pytest>=8.3.2
+httpx[socks]>=0.27.0
