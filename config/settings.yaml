@@ -1,0 +1,6 @@
+# config/settings.yaml
+solana:
+  retry_attempts: 3
+  retry_delay: 5  # seconds
+alerts:
+  growth_threshold: 100  # % increase for notifications
