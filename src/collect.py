@@ -7,10 +7,12 @@ load_dotenv()
 
 def fetch_new_tokens():
     """Fetch new memecoins launched on Pump.fun (placeholder)."""
-    rpc_url = os.getenv("SOLANA_RPC_URL", "https://api.mainnet-beta.solana.com")
+    rpc_url = os.getenv("SOLANA_RPC_URL")
+    if not rpc_url:
+        raise ValueError("SOLANA_RPC_URL not set in .env")
     client = Client(rpc_url)
     if client.is_connected():
-        print("Connected to Solana RPC at", rpc_url)
+        print(f"Connected to Solana RPC at {rpc_url}")
         # TODO: Add Pump.fun contract event monitoring
         return [
             {
